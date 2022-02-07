@@ -1,0 +1,850 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="sidebar-visible no-js light">
+    <head>
+        <link rel="preload" as="font" type="../font/woff2" href="fonts/noto-serif-jp-v15-japanese-200.woff2" crossorigin>
+        <link rel="preload" as="font" type="../font/woff2" href="fonts/noto-serif-jp-v15-japanese-300.woff2" crossorigin>
+        <link rel="preload" as="font" type="../font/woff2" href="fonts/noto-serif-jp-v15-japanese-500.woff2" crossorigin>
+        <link rel="preload" as="font" type="../font/woff2" href="fonts/noto-serif-jp-v15-japanese-600.woff2" crossorigin>
+        <link rel="preload" as="font" type="../font/woff2" href="fonts/noto-serif-jp-v15-japanese-700.woff2" crossorigin>
+        <link rel="preload" as="font" type="../font/woff2" href="fonts/noto-serif-jp-v15-japanese-900.woff2" crossorigin>
+        <link rel="preload" as="font" type="../font/woff2" href="fonts/noto-serif-jp-v15-japanese-regular.woff2" crossorigin>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>The Adventure of the Three Students - The Return of Sherlock Holmes</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="fonts/font.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="src/theme/solarized-light-hljs.css">
+        <link rel="stylesheet" href="src/theme/solarized-dark-hljs.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Home</a></li><li class="chapter-item expanded "><a href="The_Adventure_of_the_Empty_House.html"><strong aria-hidden="true">1.</strong> The Adventure of the Empty House</a></li><li class="chapter-item expanded "><a href="The_Adventure_of_the_Norwood_Builder.html"><strong aria-hidden="true">2.</strong> The Adventure of the Norwood Builder</a></li><li class="chapter-item expanded "><a href="The_Adventure_of_the_Dancing_Men.html"><strong aria-hidden="true">3.</strong> The Adventure of the Dancing Men</a></li><li class="chapter-item expanded "><a href="The_Adventure_of_the_Solitary_Cyclist.html"><strong aria-hidden="true">4.</strong> The Adventure of the Solitary Cyclist</a></li><li class="chapter-item expanded "><a href="The_Adventure_of_the_Priory_School.html"><strong aria-hidden="true">5.</strong> The Adventure of the Priory School</a></li><li class="chapter-item expanded "><a href="The_Adventure_of_Black_Peter.html"><strong aria-hidden="true">6.</strong> The Adventure of Black Peter.</a></li><li class="chapter-item expanded "><a href="The_Adventure_of_Charles_Augustus_Milverton.html"><strong aria-hidden="true">7.</strong> The Adventure of Charles Augustus Milverton</a></li><li class="chapter-item expanded "><a href="The_Adventure_of_the_Six_Napoleons.html"><strong aria-hidden="true">8.</strong> The Adventure of the Six Napoleons</a></li><li class="chapter-item expanded "><a href="The_Adventure_of_the_Three_Students.html" class="active"><strong aria-hidden="true">9.</strong> The Adventure of the Three Students</a></li><li class="chapter-item expanded "><a href="The_Adventure_of_the_Golden_Pince-Nez.html"><strong aria-hidden="true">10.</strong> The Adventure of the Golden Pince-Nez</a></li><li class="chapter-item expanded "><a href="The_Adventure_of_the_Missing_Three-Quarter.html"><strong aria-hidden="true">11.</strong> The Adventure of the Missing Three-Quarter</a></li><li class="chapter-item expanded "><a href="The_Adventure_of_the_Abbey_Grange.html"><strong aria-hidden="true">12.</strong> The Adventure of the Abbey Grange</a></li><li class="chapter-item expanded "><a href="The_Adventure_of_the_Second_Stain.html"><strong aria-hidden="true">13.</strong> The Adventure of the Second Stain</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="solarized-light">Solarized Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="solarized-dark">Solarized Dark</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Return of Sherlock Holmes</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/solareenlo/The_Return_of_Sherlock_Holmes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/solareenlo/The_Return_of_Sherlock_Holmes/edit/main/src/The_Adventure_of_the_Three_Students.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="9-the-adventure-of-the-three-students"><a class="header" href="#9-the-adventure-of-the-three-students">9. The Adventure of the Three Students</a></h1>
+<p>It was in the year ’95 that a combination of events, into which I
+need not enter, caused Mr. Sherlock Holmes and myself to spend
+some weeks in one of our great university towns, and it was
+during this time that the small but instructive adventure which I
+am about to relate befell us. It will be obvious that any details
+which would help the reader exactly to identify the college or
+the criminal would be injudicious and offensive. So painful a
+scandal may well be allowed to die out. With due discretion the
+incident itself may, however, be described, since it serves to
+illustrate some of those qualities for which my friend was
+remarkable. I will endeavour, in my statement, to avoid such
+terms as would serve to limit the events to any particular place,
+or give a clue as to the people concerned.</p>
+<p>We were residing at the time in furnished lodgings close to a
+library where Sherlock Holmes was pursuing some laborious
+researches in early English charters—researches which led to
+results so striking that they may be the subject of one of my
+future narratives. Here it was that one evening we received a
+visit from an acquaintance, Mr. Hilton Soames, tutor and lecturer
+at the College of St. Luke’s. Mr. Soames was a tall, spare man,
+of a nervous and excitable temperament. I had always known him to
+be restless in his manner, but on this particular occasion he was
+in such a state of uncontrollable agitation that it was clear
+something very unusual had occurred.</p>
+<p>“I trust, Mr. Holmes, that you can spare me a few hours of your
+valuable time. We have had a very painful incident at St. Luke’s,
+and really, but for the happy chance of your being in town, I
+should have been at a loss what to do.”</p>
+<p>“I am very busy just now, and I desire no distractions,” my
+friend answered. “I should much prefer that you called in the aid
+of the police.”</p>
+<p>“No, no, my dear sir; such a course is utterly impossible. When
+once the law is evoked it cannot be stayed again, and this is
+just one of those cases where, for the credit of the college, it
+is most essential to avoid scandal. Your discretion is as
+well-known as your powers, and you are the one man in the world
+who can help me. I beg you, Mr. Holmes, to do what you can.”</p>
+<p>My friend’s temper had not improved since he had been deprived of
+the congenial surroundings of Baker Street. Without his
+scrapbooks, his chemicals, and his homely untidiness, he was an
+uncomfortable man. He shrugged his shoulders in ungracious
+acquiescence, while our visitor in hurried words and with much
+excitable gesticulation poured forth his story.</p>
+<p>“I must explain to you, Mr. Holmes, that to-morrow is the first
+day of the examination for the Fortescue Scholarship. I am one of
+the examiners. My subject is Greek, and the first of the papers
+consists of a large passage of Greek translation which the
+candidate has not seen. This passage is printed on the
+examination paper, and it would naturally be an immense advantage
+if the candidate could prepare it in advance. For this reason,
+great care is taken to keep the paper secret.</p>
+<p>“To-day, about three o’clock, the proofs of this paper arrived
+from the printers. The exercise consists of half a chapter of
+Thucydides. I had to read it over carefully, as the text must be
+absolutely correct. At four-thirty my task was not yet completed.
+I had, however, promised to take tea in a friend’s rooms, so I
+left the proof upon my desk. I was absent rather more than an
+hour.</p>
+<p>“You are aware, Mr. Holmes, that our college doors are double—a
+green baize one within and a heavy oak one without. As I
+approached my outer door, I was amazed to see a key in it. For an
+instant I imagined that I had left my own there, but on feeling
+in my pocket I found that it was all right. The only duplicate
+which existed, so far as I knew, was that which belonged to my
+servant, Bannister—a man who has looked after my room for ten
+years, and whose honesty is absolutely above suspicion. I found
+that the key was indeed his, that he had entered my room to know
+if I wanted tea, and that he had very carelessly left the key in
+the door when he came out. His visit to my room must have been
+within a very few minutes of my leaving it. His forgetfulness
+about the key would have mattered little upon any other occasion,
+but on this one day it has produced the most deplorable
+consequences.</p>
+<p>“The moment I looked at my table, I was aware that someone had
+rummaged among my papers. The proof was in three long slips. I
+had left them all together. Now, I found that one of them was
+lying on the floor, one was on the side table near the window,
+and the third was where I had left it.”</p>
+<p>Holmes stirred for the first time.</p>
+<p>“The first page on the floor, the second in the window, the third
+where you left it,” said he.</p>
+<p>“Exactly, Mr. Holmes. You amaze me. How could you possibly know
+that?”</p>
+<p>“Pray continue your very interesting statement.”</p>
+<p>“For an instant I imagined that Bannister had taken the
+unpardonable liberty of examining my papers. He denied it,
+however, with the utmost earnestness, and I am convinced that he
+was speaking the truth. The alternative was that someone passing
+had observed the key in the door, had known that I was out, and
+had entered to look at the papers. A large sum of money is at
+stake, for the scholarship is a very valuable one, and an
+unscrupulous man might very well run a risk in order to gain an
+advantage over his fellows.</p>
+<p>“Bannister was very much upset by the incident. He had nearly
+fainted when we found that the papers had undoubtedly been
+tampered with. I gave him a little brandy and left him collapsed
+in a chair, while I made a most careful examination of the room.
+I soon saw that the intruder had left other traces of his
+presence besides the rumpled papers. On the table in the window
+were several shreds from a pencil which had been sharpened. A
+broken tip of lead was lying there also. Evidently the rascal had
+copied the paper in a great hurry, had broken his pencil, and had
+been compelled to put a fresh point to it.”</p>
+<p>“Excellent!” said Holmes, who was recovering his good-humour as
+his attention became more engrossed by the case. “Fortune has
+been your friend.”</p>
+<p>“This was not all. I have a new writing-table with a fine surface
+of red leather. I am prepared to swear, and so is Bannister, that
+it was smooth and unstained. Now I found a clean cut in it about
+three inches long—not a mere scratch, but a positive cut. Not
+only this, but on the table I found a small ball of black dough
+or clay, with specks of something which looks like sawdust in it.
+I am convinced that these marks were left by the man who rifled
+the papers. There were no footmarks and no other evidence as to
+his identity. I was at my wits’ end, when suddenly the happy
+thought occurred to me that you were in the town, and I came
+straight round to put the matter into your hands. Do help me, Mr.
+Holmes. You see my dilemma. Either I must find the man or else
+the examination must be postponed until fresh papers are
+prepared, and since this cannot be done without explanation,
+there will ensue a hideous scandal, which will throw a cloud not
+only on the college, but on the university. Above all things, I
+desire to settle the matter quietly and discreetly.”</p>
+<p>“I shall be happy to look into it and to give you such advice as
+I can,” said Holmes, rising and putting on his overcoat. “The
+case is not entirely devoid of interest. Had anyone visited you
+in your room after the papers came to you?”</p>
+<p>“Yes, young Daulat Ras, an Indian student, who lives on the same
+stair, came in to ask me some particulars about the examination.”</p>
+<p>“For which he was entered?”</p>
+<p>“Yes.”</p>
+<p>“And the papers were on your table?”</p>
+<p>“To the best of my belief, they were rolled up.”</p>
+<p>“But might be recognized as proofs?”</p>
+<p>“Possibly.”</p>
+<p>“No one else in your room?”</p>
+<p>“No.”</p>
+<p>“Did anyone know that these proofs would be there?”</p>
+<p>“No one save the printer.”</p>
+<p>“Did this man Bannister know?”</p>
+<p>“No, certainly not. No one knew.”</p>
+<p>“Where is Bannister now?”</p>
+<p>“He was very ill, poor fellow. I left him collapsed in the chair.
+I was in such a hurry to come to you.”</p>
+<p>“You left your door open?”</p>
+<p>“I locked up the papers first.”</p>
+<p>“Then it amounts to this, Mr. Soames: that, unless the Indian
+student recognized the roll as being proofs, the man who tampered
+with them came upon them accidentally without knowing that they
+were there.”</p>
+<p>“So it seems to me.”</p>
+<p>Holmes gave an enigmatic smile.</p>
+<p>“Well,” said he, “let us go round. Not one of your cases,
+Watson—mental, not physical. All right; come if you want to. Now,
+Mr. Soames—at your disposal!”</p>
+<p>The sitting-room of our client opened by a long, low, latticed
+window on to the ancient lichen-tinted court of the old college.
+A Gothic arched door led to a worn stone staircase. On the ground
+floor was the tutor’s room. Above were three students, one on
+each story. It was already twilight when we reached the scene of
+our problem. Holmes halted and looked earnestly at the window.
+Then he approached it, and, standing on tiptoe with his neck
+craned, he looked into the room.</p>
+<p>“He must have entered through the door. There is no opening
+except the one pane,” said our learned guide.</p>
+<p>“Dear me!” said Holmes, and he smiled in a singular way as he
+glanced at our companion. “Well, if there is nothing to be
+learned here, we had best go inside.”</p>
+<p>The lecturer unlocked the outer door and ushered us into his
+room. We stood at the entrance while Holmes made an examination
+of the carpet.</p>
+<p>“I am afraid there are no signs here,” said he. “One could hardly
+hope for any upon so dry a day. Your servant seems to have quite
+recovered. You left him in a chair, you say. Which chair?”</p>
+<p>“By the window there.”</p>
+<p>“I see. Near this little table. You can come in now. I have
+finished with the carpet. Let us take the little table first. Of
+course, what has happened is very clear. The man entered and took
+the papers, sheet by sheet, from the central table. He carried
+them over to the window table, because from there he could see if
+you came across the courtyard, and so could effect an escape.”</p>
+<p>“As a matter of fact, he could not,” said Soames, “for I entered
+by the side door.”</p>
+<p>“Ah, that’s good! Well, anyhow, that was in his mind. Let me see
+the three strips. No finger impressions—no! Well, he carried over
+this one first, and he copied it. How long would it take him to
+do that, using every possible contraction? A quarter of an hour,
+not less. Then he tossed it down and seized the next. He was in
+the midst of that when your return caused him to make a very
+hurried retreat—<em>very</em> hurried, since he had not time to replace
+the papers which would tell you that he had been there. You were
+not aware of any hurrying feet on the stair as you entered the
+outer door?”</p>
+<p>“No, I can’t say I was.”</p>
+<p>“Well, he wrote so furiously that he broke his pencil, and had,
+as you observe, to sharpen it again. This is of interest, Watson.
+The pencil was not an ordinary one. It was above the usual size,
+with a soft lead, the outer colour was dark blue, the maker’s
+name was printed in silver lettering, and the piece remaining is
+only about an inch and a half long. Look for such a pencil, Mr.
+Soames, and you have got your man. When I add that he possesses a
+large and very blunt knife, you have an additional aid.”</p>
+<p>Mr. Soames was somewhat overwhelmed by this flood of information.
+“I can follow the other points,” said he, “but really, in this
+matter of the length——”</p>
+<p>Holmes held out a small chip with the letters NN and a space of
+clear wood after them.</p>
+<p>“You see?”</p>
+<p>“No, I fear that even now——”</p>
+<p>“Watson, I have always done you an injustice. There are others.
+What could this NN be? It is at the end of a word. You are aware
+that Johann Faber is the most common maker’s name. Is it not
+clear that there is just as much of the pencil left as usually
+follows the Johann?” He held the small table sideways to the
+electric light. “I was hoping that if the paper on which he wrote
+was thin, some trace of it might come through upon this polished
+surface. No, I see nothing. I don’t think there is anything more
+to be learned here. Now for the central table. This small pellet
+is, I presume, the black, doughy mass you spoke of. Roughly
+pyramidal in shape and hollowed out, I perceive. As you say,
+there appear to be grains of sawdust in it. Dear me, this is very
+interesting. And the cut—a positive tear, I see. It began with a
+thin scratch and ended in a jagged hole. I am much indebted to
+you for directing my attention to this case, Mr. Soames. Where
+does that door lead to?”</p>
+<p>“To my bedroom.”</p>
+<p>“Have you been in it since your adventure?”</p>
+<p>“No, I came straight away for you.”</p>
+<p>“I should like to have a glance round. What a charming,
+old-fashioned room! Perhaps you will kindly wait a minute, until
+I have examined the floor. No, I see nothing. What about this
+curtain? You hang your clothes behind it. If anyone were forced
+to conceal himself in this room he must do it there, since the
+bed is too low and the wardrobe too shallow. No one there, I
+suppose?”</p>
+<p>As Holmes drew the curtain I was aware, from some little rigidity
+and alertness of his attitude, that he was prepared for an
+emergency. As a matter of fact, the drawn curtain disclosed
+nothing but three or four suits of clothes hanging from a line of
+pegs. Holmes turned away, and stooped suddenly to the floor.</p>
+<p>“Halloa! What’s this?” said he.</p>
+<p>It was a small pyramid of black, putty-like stuff, exactly like
+the one upon the table of the study. Holmes held it out on his
+open palm in the glare of the electric light.</p>
+<p>“Your visitor seems to have left traces in your bedroom as well
+as in your sitting-room, Mr. Soames.”</p>
+<p>“What could he have wanted there?”</p>
+<p>“I think it is clear enough. You came back by an unexpected way,
+and so he had no warning until you were at the very door. What
+could he do? He caught up everything which would betray him, and
+he rushed into your bedroom to conceal himself.”</p>
+<p>“Good gracious, Mr. Holmes, do you mean to tell me that, all the
+time I was talking to Bannister in this room, we had the man
+prisoner if we had only known it?”</p>
+<p>“So I read it.”</p>
+<p>“Surely there is another alternative, Mr. Holmes. I don’t know
+whether you observed my bedroom window?”</p>
+<p>“Lattice-paned, lead framework, three separate windows, one
+swinging on hinge, and large enough to admit a man.”</p>
+<p>“Exactly. And it looks out on an angle of the courtyard so as to
+be partly invisible. The man might have effected his entrance
+there, left traces as he passed through the bedroom, and finally,
+finding the door open, have escaped that way.”</p>
+<p>Holmes shook his head impatiently.</p>
+<p>“Let us be practical,” said he. “I understand you to say that
+there are three students who use this stair, and are in the habit
+of passing your door?”</p>
+<p>“Yes, there are.”</p>
+<p>“And they are all in for this examination?”</p>
+<p>“Yes.”</p>
+<p>“Have you any reason to suspect any one of them more than the
+others?”</p>
+<p>Soames hesitated.</p>
+<p>“It is a very delicate question,” said he. “One hardly likes to
+throw suspicion where there are no proofs.”</p>
+<p>“Let us hear the suspicions. I will look after the proofs.”</p>
+<p>“I will tell you, then, in a few words the character of the three
+men who inhabit these rooms. The lower of the three is Gilchrist,
+a fine scholar and athlete, plays in the Rugby team and the
+cricket team for the college, and got his Blue for the hurdles
+and the long jump. He is a fine, manly fellow. His father was the
+notorious Sir Jabez Gilchrist, who ruined himself on the turf. My
+scholar has been left very poor, but he is hard-working and
+industrious. He will do well.</p>
+<p>“The second floor is inhabited by Daulat Ras, the Indian. He is a
+quiet, inscrutable fellow; as most of those Indians are. He is
+well up in his work, though his Greek is his weak subject. He is
+steady and methodical.</p>
+<p>“The top floor belongs to Miles McLaren. He is a brilliant fellow
+when he chooses to work—one of the brightest intellects of the
+university; but he is wayward, dissipated, and unprincipled. He
+was nearly expelled over a card scandal in his first year. He has
+been idling all this term, and he must look forward with dread to
+the examination.”</p>
+<p>“Then it is he whom you suspect?”</p>
+<p>“I dare not go so far as that. But, of the three, he is perhaps
+the least unlikely.”</p>
+<p>“Exactly. Now, Mr. Soames, let us have a look at your servant,
+Bannister.”</p>
+<p>He was a little, white-faced, clean-shaven, grizzly-haired fellow
+of fifty. He was still suffering from this sudden disturbance of
+the quiet routine of his life. His plump face was twitching with
+his nervousness, and his fingers could not keep still.</p>
+<p>“We are investigating this unhappy business, Bannister,” said his
+master.</p>
+<p>“Yes, sir.”</p>
+<p>“I understand,” said Holmes, “that you left your key in the
+door?”</p>
+<p>“Yes, sir.”</p>
+<p>“Was it not very extraordinary that you should do this on the
+very day when there were these papers inside?”</p>
+<p>“It was most unfortunate, sir. But I have occasionally done the
+same thing at other times.”</p>
+<p>“When did you enter the room?”</p>
+<p>“It was about half-past four. That is Mr. Soames’ tea time.”</p>
+<p>“How long did you stay?”</p>
+<p>“When I saw that he was absent, I withdrew at once.”</p>
+<p>“Did you look at these papers on the table?”</p>
+<p>“No, sir—certainly not.”</p>
+<p>“How came you to leave the key in the door?”</p>
+<p>“I had the tea-tray in my hand. I thought I would come back for
+the key. Then I forgot.”</p>
+<p>“Has the outer door a spring lock?”</p>
+<p>“No, sir.”</p>
+<p>“Then it was open all the time?”</p>
+<p>“Yes, sir.”</p>
+<p>“Anyone in the room could get out?”</p>
+<p>“Yes, sir.”</p>
+<p>“When Mr. Soames returned and called for you, you were very much
+disturbed?”</p>
+<p>“Yes, sir. Such a thing has never happened during the many years
+that I have been here. I nearly fainted, sir.”</p>
+<p>“So I understand. Where were you when you began to feel bad?”</p>
+<p>“Where was I, sir? Why, here, near the door.”</p>
+<p>“That is singular, because you sat down in that chair over yonder
+near the corner. Why did you pass these other chairs?”</p>
+<p>“I don’t know, sir, it didn’t matter to me where I sat.”</p>
+<p>“I really don’t think he knew much about it, Mr. Holmes. He was
+looking very bad—quite ghastly.”</p>
+<p>“You stayed here when your master left?”</p>
+<p>“Only for a minute or so. Then I locked the door and went to my
+room.”</p>
+<p>“Whom do you suspect?”</p>
+<p>“Oh, I would not venture to say, sir. I don’t believe there is
+any gentleman in this university who is capable of profiting by
+such an action. No, sir, I’ll not believe it.”</p>
+<p>“Thank you, that will do,” said Holmes. “Oh, one more word. You
+have not mentioned to any of the three gentlemen whom you attend
+that anything is amiss?”</p>
+<p>“No, sir—not a word.”</p>
+<p>“You haven’t seen any of them?”</p>
+<p>“No, sir.”</p>
+<p>“Very good. Now, Mr. Soames, we will take a walk in the
+quadrangle, if you please.”</p>
+<p>Three yellow squares of light shone above us in the gathering
+gloom.</p>
+<p>“Your three birds are all in their nests,” said Holmes, looking
+up. “Halloa! What’s that? One of them seems restless enough.”</p>
+<p>It was the Indian, whose dark silhouette appeared suddenly upon
+his blind. He was pacing swiftly up and down his room.</p>
+<p>“I should like to have a peep at each of them,” said Holmes. “Is
+it possible?”</p>
+<p>“No difficulty in the world,” Soames answered. “This set of rooms
+is quite the oldest in the college, and it is not unusual for
+visitors to go over them. Come along, and I will personally
+conduct you.”</p>
+<p>“No names, please!” said Holmes, as we knocked at Gilchrist’s
+door. A tall, flaxen-haired, slim young fellow opened it, and
+made us welcome when he understood our errand. There were some
+really curious pieces of mediæval domestic architecture within.
+Holmes was so charmed with one of them that he insisted on
+drawing it in his notebook, broke his pencil, had to borrow one
+from our host and finally borrowed a knife to sharpen his own.
+The same curious accident happened to him in the rooms of the
+Indian—a silent, little, hook-nosed fellow, who eyed us askance,
+and was obviously glad when Holmes’s architectural studies had
+come to an end. I could not see that in either case Holmes had
+come upon the clue for which he was searching. Only at the third
+did our visit prove abortive. The outer door would not open to
+our knock, and nothing more substantial than a torrent of bad
+language came from behind it. “I don’t care who you are. You can
+go to blazes!” roared the angry voice. “Tomorrow’s the exam, and
+I won’t be drawn by anyone.”</p>
+<p>“A rude fellow,” said our guide, flushing with anger as we
+withdrew down the stair. “Of course, he did not realize that it
+was I who was knocking, but none the less his conduct was very
+uncourteous, and, indeed, under the circumstances rather
+suspicious.”</p>
+<p>Holmes’s response was a curious one.</p>
+<p>“Can you tell me his exact height?” he asked.</p>
+<p>“Really, Mr. Holmes, I cannot undertake to say. He is taller than
+the Indian, not so tall as Gilchrist. I suppose five foot six
+would be about it.”</p>
+<p>“That is very important,” said Holmes. “And now, Mr. Soames, I
+wish you good-night.”</p>
+<p>Our guide cried aloud in his astonishment and dismay. “Good
+gracious, Mr. Holmes, you are surely not going to leave me in
+this abrupt fashion! You don’t seem to realize the position.
+To-morrow is the examination. I must take some definite action
+to-night. I cannot allow the examination to be held if one of the
+papers has been tampered with. The situation must be faced.”</p>
+<p>“You must leave it as it is. I shall drop round early to-morrow
+morning and chat the matter over. It is possible that I may be in
+a position then to indicate some course of action. Meanwhile, you
+change nothing—nothing at all.”</p>
+<p>“Very good, Mr. Holmes.”</p>
+<p>“You can be perfectly easy in your mind. We shall certainly find
+some way out of your difficulties. I will take the black clay
+with me, also the pencil cuttings. Good-bye.”</p>
+<p>When we were out in the darkness of the quadrangle, we again
+looked up at the windows. The Indian still paced his room. The
+others were invisible.</p>
+<p>“Well, Watson, what do you think of it?” Holmes asked, as we came
+out into the main street. “Quite a little parlour game—sort of
+three-card trick, is it not? There are your three men. It must be
+one of them. You take your choice. Which is yours?”</p>
+<p>“The foul-mouthed fellow at the top. He is the one with the worst
+record. And yet that Indian was a sly fellow also. Why should he
+be pacing his room all the time?”</p>
+<p>“There is nothing in that. Many men do it when they are trying to
+learn anything by heart.”</p>
+<p>“He looked at us in a queer way.”</p>
+<p>“So would you, if a flock of strangers came in on you when you
+were preparing for an examination next day, and every moment was
+of value. No, I see nothing in that. Pencils, too, and knives—all
+was satisfactory. But that fellow <em>does</em> puzzle me.”</p>
+<p>“Who?”</p>
+<p>“Why, Bannister, the servant. What’s his game in the matter?”</p>
+<p>“He impressed me as being a perfectly honest man.”</p>
+<p>“So he did me. That’s the puzzling part. Why should a perfectly
+honest man—well, well, here’s a large stationer’s. We shall begin
+our researches here.”</p>
+<p>There were only four stationers of any consequences in the town,
+and at each Holmes produced his pencil chips, and bid high for a
+duplicate. All were agreed that one could be ordered, but that it
+was not a usual size of pencil and that it was seldom kept in
+stock. My friend did not appear to be depressed by his failure,
+but shrugged his shoulders in half-humorous resignation.</p>
+<p>“No good, my dear Watson. This, the best and only final clue, has
+run to nothing. But, indeed, I have little doubt that we can
+build up a sufficient case without it. By Jove! my dear fellow,
+it is nearly nine, and the landlady babbled of green peas at
+seven-thirty. What with your eternal tobacco, Watson, and your
+irregularity at meals, I expect that you will get notice to quit,
+and that I shall share your downfall—not, however, before we have
+solved the problem of the nervous tutor, the careless servant,
+and the three enterprising students.”</p>
+<p>Holmes made no further allusion to the matter that day, though he
+sat lost in thought for a long time after our belated dinner. At
+eight in the morning, he came into my room just as I finished my
+toilet.</p>
+<p>“Well, Watson,” said he, “it is time we went down to St. Luke’s.
+Can you do without breakfast?”</p>
+<p>“Certainly.”</p>
+<p>“Soames will be in a dreadful fidget until we are able to tell
+him something positive.”</p>
+<p>“Have you anything positive to tell him?”</p>
+<p>“I think so.”</p>
+<p>“You have formed a conclusion?”</p>
+<p>“Yes, my dear Watson, I have solved the mystery.”</p>
+<p>“But what fresh evidence could you have got?”</p>
+<p>“Aha! It is not for nothing that I have turned myself out of bed
+at the untimely hour of six. I have put in two hours’ hard work
+and covered at least five miles, with something to show for it.
+Look at that!”</p>
+<p>He held out his hand. On the palm were three little pyramids of
+black, doughy clay.</p>
+<p>“Why, Holmes, you had only two yesterday.”</p>
+<p>“And one more this morning. It is a fair argument that wherever
+No. 3 came from is also the source of Nos. 1 and 2. Eh, Watson?
+Well, come along and put friend Soames out of his pain.”</p>
+<p>The unfortunate tutor was certainly in a state of pitiable
+agitation when we found him in his chambers. In a few hours the
+examination would commence, and he was still in the dilemma
+between making the facts public and allowing the culprit to
+compete for the valuable scholarship. He could hardly stand still
+so great was his mental agitation, and he ran towards Holmes with
+two eager hands outstretched.</p>
+<p>“Thank heaven that you have come! I feared that you had given it
+up in despair. What am I to do? Shall the examination proceed?”</p>
+<p>“Yes, let it proceed, by all means.”</p>
+<p>“But this rascal?”</p>
+<p>“He shall not compete.”</p>
+<p>“You know him?”</p>
+<p>“I think so. If this matter is not to become public, we must give
+ourselves certain powers and resolve ourselves into a small
+private court-martial. You there, if you please, Soames! Watson
+you here! I’ll take the armchair in the middle. I think that we
+are now sufficiently imposing to strike terror into a guilty
+breast. Kindly ring the bell!”</p>
+<p>Bannister entered, and shrank back in evident surprise and fear
+at our judicial appearance.</p>
+<p>“You will kindly close the door,” said Holmes. “Now, Bannister,
+will you please tell us the truth about yesterday’s incident?”</p>
+<p>The man turned white to the roots of his hair.</p>
+<p>“I have told you everything, sir.”</p>
+<p>“Nothing to add?”</p>
+<p>“Nothing at all, sir.”</p>
+<p>“Well, then, I must make some suggestions to you. When you sat
+down on that chair yesterday, did you do so in order to conceal
+some object which would have shown who had been in the room?”</p>
+<p>Bannister’s face was ghastly.</p>
+<p>“No, sir, certainly not.”</p>
+<p>“It is only a suggestion,” said Holmes, suavely. “I frankly admit
+that I am unable to prove it. But it seems probable enough, since
+the moment that Mr. Soames’s back was turned, you released the
+man who was hiding in that bedroom.”</p>
+<p>Bannister licked his dry lips.</p>
+<p>“There was no man, sir.”</p>
+<p>“Ah, that’s a pity, Bannister. Up to now you may have spoken the
+truth, but now I know that you have lied.”</p>
+<p>The man’s face set in sullen defiance.</p>
+<p>“There was no man, sir.”</p>
+<p>“Come, come, Bannister!”</p>
+<p>“No, sir, there was no one.”</p>
+<p>“In that case, you can give us no further information. Would you
+please remain in the room? Stand over there near the bedroom
+door. Now, Soames, I am going to ask you to have the great
+kindness to go up to the room of young Gilchrist, and to ask him
+to step down into yours.”</p>
+<p>An instant later the tutor returned, bringing with him the
+student. He was a fine figure of a man, tall, lithe, and agile,
+with a springy step and a pleasant, open face. His troubled blue
+eyes glanced at each of us, and finally rested with an expression
+of blank dismay upon Bannister in the farther corner.</p>
+<p>“Just close the door,” said Holmes. “Now, Mr. Gilchrist, we are
+all quite alone here, and no one need ever know one word of what
+passes between us. We can be perfectly frank with each other. We
+want to know, Mr. Gilchrist, how you, an honourable man, ever
+came to commit such an action as that of yesterday?”</p>
+<p>The unfortunate young man staggered back, and cast a look full of
+horror and reproach at Bannister.</p>
+<p>“No, no, Mr. Gilchrist, sir, I never said a word—never one word!”
+cried the servant.</p>
+<p>“No, but you have now,” said Holmes. “Now, sir, you must see that
+after Bannister’s words your position is hopeless, and that your
+only chance lies in a frank confession.”</p>
+<p>For a moment Gilchrist, with upraised hand, tried to control his
+writhing features. The next he had thrown himself on his knees
+beside the table, and burying his face in his hands, he had burst
+into a storm of passionate sobbing.</p>
+<p>“Come, come,” said Holmes, kindly, “it is human to err, and at
+least no one can accuse you of being a callous criminal. Perhaps
+it would be easier for you if I were to tell Mr. Soames what
+occurred, and you can check me where I am wrong. Shall I do so?
+Well, well, don’t trouble to answer. Listen, and see that I do
+you no injustice.</p>
+<p>“From the moment, Mr. Soames, that you said to me that no one,
+not even Bannister, could have told that the papers were in your
+room, the case began to take a definite shape in my mind. The
+printer one could, of course, dismiss. He could examine the
+papers in his own office. The Indian I also thought nothing of.
+If the proofs were in a roll, he could not possibly know what
+they were. On the other hand, it seemed an unthinkable
+coincidence that a man should dare to enter the room, and that by
+chance on that very day the papers were on the table. I dismissed
+that. The man who entered knew that the papers were there. How
+did he know?</p>
+<p>“When I approached your room, I examined the window. You amused
+me by supposing that I was contemplating the possibility of
+someone having in broad daylight, under the eyes of all these
+opposite rooms, forced himself through it. Such an idea was
+absurd. I was measuring how tall a man would need to be in order
+to see, as he passed, what papers were on the central table. I am
+six feet high, and I could do it with an effort. No one less than
+that would have a chance. Already you see I had reason to think
+that, if one of your three students was a man of unusual height,
+he was the most worth watching of the three.</p>
+<p>“I entered, and I took you into my confidence as to the
+suggestions of the side table. Of the centre table I could make
+nothing, until in your description of Gilchrist you mentioned
+that he was a long-distance jumper. Then the whole thing came to
+me in an instant, and I only needed certain corroborative proofs,
+which I speedily obtained.</p>
+<p>“What happened was this. This young fellow had employed his
+afternoon at the athletic grounds, where he had been practising
+the jump. He returned carrying his jumping-shoes, which are
+provided, as you are aware, with several sharp spikes. As he
+passed your window he saw, by means of his great height, these
+proofs upon your table, and conjectured what they were. No harm
+would have been done had it not been that, as he passed your
+door, he perceived the key which had been left by the
+carelessness of your servant. A sudden impulse came over him to
+enter, and see if they were indeed the proofs. It was not a
+dangerous exploit for he could always pretend that he had simply
+looked in to ask a question.</p>
+<p>“Well, when he saw that they were indeed the proofs, it was then
+that he yielded to temptation. He put his shoes on the table.
+What was it you put on that chair near the window?”</p>
+<p>“Gloves,” said the young man.</p>
+<p>Holmes looked triumphantly at Bannister. “He put his gloves on
+the chair, and he took the proofs, sheet by sheet, to copy them.
+He thought the tutor must return by the main gate and that he
+would see him. As we know, he came back by the side gate.
+Suddenly he heard him at the very door. There was no possible
+escape. He forgot his gloves but he caught up his shoes and
+darted into the bedroom. You observe that the scratch on that
+table is slight at one side, but deepens in the direction of the
+bedroom door. That in itself is enough to show us that the shoe
+had been drawn in that direction, and that the culprit had taken
+refuge there. The earth round the spike had been left on the
+table, and a second sample was loosened and fell in the bedroom.
+I may add that I walked out to the athletic grounds this morning,
+saw that tenacious black clay is used in the jumping-pit and
+carried away a specimen of it, together with some of the fine tan
+or sawdust which is strewn over it to prevent the athlete from
+slipping. Have I told the truth, Mr. Gilchrist?”</p>
+<p>The student had drawn himself erect.</p>
+<p>“Yes, sir, it is true,” said he.</p>
+<p>“Good heavens! have you nothing to add?” cried Soames.</p>
+<p>“Yes, sir, I have, but the shock of this disgraceful exposure has
+bewildered me. I have a letter here, Mr. Soames, which I wrote to
+you early this morning in the middle of a restless night. It was
+before I knew that my sin had found me out. Here it is, sir. You
+will see that I have said, ‘I have determined not to go in for
+the examination. I have been offered a commission in the
+Rhodesian Police, and I am going out to South Africa at once.’”</p>
+<p>“I am indeed pleased to hear that you did not intend to profit by
+your unfair advantage,” said Soames. “But why did you change your
+purpose?”</p>
+<p>Gilchrist pointed to Bannister.</p>
+<p>“There is the man who set me in the right path,” said he.</p>
+<p>“Come now, Bannister,” said Holmes. “It will be clear to you,
+from what I have said, that only you could have let this young
+man out, since you were left in the room, and must have locked
+the door when you went out. As to his escaping by that window, it
+was incredible. Can you not clear up the last point in this
+mystery, and tell us the reasons for your action?”</p>
+<p>“It was simple enough, sir, if you only had known, but, with all
+your cleverness, it was impossible that you could know. Time was,
+sir, when I was butler to old Sir Jabez Gilchrist, this young
+gentleman’s father. When he was ruined I came to the college as
+servant, but I never forgot my old employer because he was down
+in the world. I watched his son all I could for the sake of the
+old days. Well, sir, when I came into this room yesterday, when
+the alarm was given, the very first thing I saw was Mr.
+Gilchrist’s tan gloves a-lying in that chair. I knew those gloves
+well, and I understood their message. If Mr. Soames saw them, the
+game was up. I flopped down into that chair, and nothing would
+budge me until Mr. Soames he went for you. Then out came my poor
+young master, whom I had dandled on my knee, and confessed it all
+to me. Wasn’t it natural, sir, that I should save him, and wasn’t
+it natural also that I should try to speak to him as his dead
+father would have done, and make him understand that he could not
+profit by such a deed? Could you blame me, sir?”</p>
+<p>“No, indeed,” said Holmes, heartily, springing to his feet.
+“Well, Soames, I think we have cleared your little problem up,
+and our breakfast awaits us at home. Come, Watson! As to you,
+sir, I trust that a bright future awaits you in Rhodesia. For
+once you have fallen low. Let us see, in the future, how high you
+can rise.”</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="The_Adventure_of_the_Six_Napoleons.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="The_Adventure_of_the_Golden_Pince-Nez.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="The_Adventure_of_the_Six_Napoleons.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="The_Adventure_of_the_Golden_Pince-Nez.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="src/theme/theme-solarized_dark.js"></script>
+        <script type="text/javascript" src="src/theme/theme-solarized_light.js"></script>
+    </body>
+</html>
